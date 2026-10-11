@@ -132,13 +132,43 @@
         <p class="head__lead">Quelques travaux sortis de l'atelier. Les derniers chantiers sont publiés au fil de l'eau sur la page Facebook.</p>
       </header>
 
-      <!-- Ajouter une photo : copier un bloc <figure> et changer l'image + la légende. -->
+      <!-- Ajouter une photo : copier un bloc <figure> et changer l'image, ses dimensions, le texte alt et la légende. -->
       <div class="gallery" id="gallery">
-        <figure class="shot shot--wide">
-          <img src="images/soudeur.jpg" alt="Soudure d'un garde-corps cintré à l'atelier" loading="lazy" width="1024" height="574">
-          <figcaption>Garde-corps cintré en cours de soudure</figcaption>
+        <figure class="shot">
+          <img src="images/escalier-limon-central.jpg" alt="Escalier droit en acier noir à limon central et marches en tôle pliée" loading="lazy" width="720" height="960">
+          <figcaption><span>Ferronnerie</span>Escalier à limon central</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/tuyauterie-inox.jpg" alt="Lignes de tuyauterie inox à brides soudées, posées devant la camionnette Metalex" loading="lazy" width="1125" height="1500">
+          <figcaption><span>Tuyauterie industrielle</span>Lignes inox à brides</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/garde-corps-geometrique.jpg" alt="Garde-corps de trémie d'escalier en acier noir avec un motif de barres géométriques" loading="lazy" width="1125" height="1500">
+          <figcaption><span>Garde-corps</span>Motif géométrique sur mesure</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/plateformes-inox.jpg" alt="Rangée de plateformes en inox avec tôles perforées antidérapantes le long d'une ligne de production" loading="lazy" width="720" height="960">
+          <figcaption><span>Inox industriel</span>Plateformes en tôle perforée</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/portail-barreaux.jpg" alt="Portail deux battants en acier noir à barreaux droits devant une allée" loading="lazy" width="1500" height="1125">
+          <figcaption><span>Portail</span>Deux battants à barreaux</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/porte-securite-atelier.jpg" alt="Porte grillagée de sécurité en acier posée à l'entrée d'un atelier" loading="lazy" width="540" height="720">
+          <figcaption><span>Sécurité</span>Porte grillagée d'atelier</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/portail-acier-bois.jpg" alt="Portail et portillon à cadre acier noir remplis de lames de bois rouge" loading="lazy" width="960" height="720">
+          <figcaption><span>Portail</span>Cadre acier, remplissage bois</figcaption>
         </figure>
       </div>
+
+      <dialog class="viewer" id="viewer" aria-label="Photo agrandie">
+        <img id="viewer-img" alt="">
+        <p id="viewer-cap"></p>
+        <button class="viewer__close" type="button" aria-label="Fermer">×</button>
+      </dialog>
 
       <a class="btn btn--ghost gallery__more" href="https://www.facebook.com/share/1K9Z2hKQFv/" target="_blank" rel="noopener">Voir tous les chantiers sur Facebook</a>
     </div>
@@ -235,6 +265,27 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Agrandir une réalisation au clic
+  var viewer = document.getElementById('viewer');
+  var viewerImg = document.getElementById('viewer-img');
+  document.querySelectorAll('.shot').forEach(function (shot) {
+    var img = shot.querySelector('img');
+    shot.tabIndex = 0;
+    shot.setAttribute('role', 'button');
+    function open() {
+      if (!viewer.showModal) return;
+      viewerImg.src = img.src;
+      viewerImg.alt = img.alt;
+      document.getElementById('viewer-cap').textContent = shot.querySelector('figcaption').lastChild.textContent;
+      viewer.showModal();
+    }
+    shot.addEventListener('click', open);
+    shot.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+  viewer.addEventListener('click', function () { viewer.close(); });
 
   document.getElementById('devis').addEventListener('submit', function (e) {
     e.preventDefault();
