@@ -43,6 +43,62 @@
   "sameAs": ["https://www.facebook.com/profile.php?id=61588205213844"]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Travaillez-vous pour les particuliers ou pour les entreprises ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pour les deux. Chez les particuliers : garde-corps, rampes, portails, escaliers, réparations. Pour les entreprises : tuyauterie industrielle en acier et en inox, plateformes, supports et maintenance. Alexandre est certifié VCA et dispose des passeports d'accès Prayon, ArcelorMittal et Aperam."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Comment obtenir un devis ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Envoyez quelques photos et des dimensions approximatives par WhatsApp, ou appelez le 0498 74 10 63. Si nécessaire, Alexandre passe prendre les mesures exactes, puis vous recevez un devis détaillé."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Où intervenez-vous ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "L'atelier se trouve à Saint-Nicolas (4420). Metalex intervient chez les particuliers et sur les sites industriels de la région liégeoise."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quels métaux et quels procédés de soudure ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Acier, inox et autres métaux, en soudure TIG, MIG/MAG et à l'arc. Alexandre est agréé TIG toutes positions."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Est-ce que vous posez vous-même ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Chaque pièce est fabriquée à l'atelier puis posée chez vous par Alexandre, finitions comprises. Vous avez un seul interlocuteur du devis à la pose."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Pouvez-vous réparer ou modifier une pièce existante ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui : réparations, renforts, modifications de portails, de rampes ou de structures métalliques. Envoyez une photo, c'est le plus rapide pour savoir ce qui est faisable."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -100,6 +156,10 @@
         <a class="btn btn--wa btn--lg" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Devis par WhatsApp</a>
         <a class="btn btn--line btn--lg hero__more" href="#realisations">Voir les réalisations<svg><use href="#i-arrow"/></svg></a>
       </div>
+      <a class="hero__proof" href="#avis">
+        <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        <span>« Le travail a été réalisé parfaitement. Je recommande à 100&nbsp;%. » <em>Jack B., client</em></span>
+      </a>
       <ul class="hero__facts">
         <li><strong>10 ans</strong> de soudure industrielle</li>
         <li><strong>Agréé TIG</strong> toutes positions</li>
@@ -194,6 +254,16 @@
         </figure>
       </div>
 
+      <aside class="cta-strip" aria-label="Demander un devis">
+        <div class="cta-strip__text">
+          <p class="cta-strip__title">Un projet comme ceux-ci&nbsp;?</p>
+          <p>Envoyez une photo de l'endroit, Alexandre vous répond personnellement avec une première idée de prix.</p>
+        </div>
+        <div class="cta-strip__actions">
+          <a class="btn btn--wa btn--lg" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20vu%20vos%20r%C3%A9alisations%20et%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Envoyer une photo</a>
+          <a class="btn btn--red btn--lg" href="tel:+32498741063"><svg><use href="#i-phone"/></svg>0498 74 10 63</a>
+        </div>
+      </aside>
       <p class="grid__more">D'autres chantiers sont publiés chaque semaine sur
         <a href="https://www.facebook.com/profile.php?id=61588205213844" target="_blank" rel="noopener">la page Facebook</a>.</p>
     </div>
@@ -205,6 +275,7 @@
     <div class="viewer__bar">
       <p class="viewer__cap" id="viewer-cap"></p>
       <span class="viewer__count" id="viewer-count"></span>
+      <a class="btn btn--wa viewer__wa" id="viewer-wa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Je veux la même chose</a>
     </div>
     <button class="viewer__btn viewer__btn--prev" type="button" data-step="-1" aria-label="Photo précédente"><svg><use href="#i-left"/></svg></button>
     <button class="viewer__btn viewer__btn--next" type="button" data-step="1" aria-label="Photo suivante"><svg><use href="#i-right"/></svg></button>
@@ -226,7 +297,10 @@
             <h3>Ferronnerie &amp; garde-corps</h3>
             <p>Garde-corps de balcon et de trémie, rampes, barres d'appui, grilles. Lignes droites ou motifs dessinés pour votre maison.</p>
           </div>
-          <button type="button" class="svc__link" data-goto="garde-corps">Voir les garde-corps<svg><use href="#i-arrow"/></svg></button>
+          <div class="svc__actions">
+            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20un%20garde-corps%20/%20une%20rampe%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+            <button type="button" class="svc__link" data-goto="garde-corps">Voir les garde-corps<svg><use href="#i-arrow"/></svg></button>
+          </div>
         </li>
         <li class="svc">
           <img class="svc__img" src="images/portail-barreaux.jpg" alt="" loading="lazy" width="1500" height="1125">
@@ -234,7 +308,10 @@
             <h3>Portails &amp; portes</h3>
             <p>Portails battants, portillons, portes de sécurité. Acier seul ou cadre acier avec remplissage bois.</p>
           </div>
-          <button type="button" class="svc__link" data-goto="portails">Voir les portails<svg><use href="#i-arrow"/></svg></button>
+          <div class="svc__actions">
+            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20un%20portail%20/%20une%20porte%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+            <button type="button" class="svc__link" data-goto="portails">Voir les portails<svg><use href="#i-arrow"/></svg></button>
+          </div>
         </li>
         <li class="svc">
           <img class="svc__img" src="images/escalier-limon-central.jpg" alt="" loading="lazy" width="720" height="960">
@@ -242,7 +319,10 @@
             <h3>Escaliers &amp; créations sur mesure</h3>
             <p>Escaliers à limon central, range-bûches, plaques en inox, réparations et modifications de pièces métalliques.</p>
           </div>
-          <button type="button" class="svc__link" data-goto="sur-mesure">Voir le sur mesure<svg><use href="#i-arrow"/></svg></button>
+          <div class="svc__actions">
+            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20une%20cr%C3%A9ation%20sur%20mesure%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+            <button type="button" class="svc__link" data-goto="sur-mesure">Voir le sur mesure<svg><use href="#i-arrow"/></svg></button>
+          </div>
         </li>
         <li class="svc">
           <img class="svc__img" src="images/tuyauterie-inox.jpg" alt="" loading="lazy" width="1125" height="1500">
@@ -250,7 +330,10 @@
             <h3>Tuyauterie industrielle</h3>
             <p>Lignes en acier et inox à brides, plateformes et supports, en atelier ou sur site. Soudure TIG, MIG/MAG et à l'arc, agréé TIG toutes positions.</p>
           </div>
-          <button type="button" class="svc__link" data-goto="industrie">Voir l'industriel<svg><use href="#i-arrow"/></svg></button>
+          <div class="svc__actions">
+            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20nous%20avons%20un%20besoin%20en%20tuyauterie%20/%20soudure%20industrielle%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+            <button type="button" class="svc__link" data-goto="industrie">Voir l'industriel<svg><use href="#i-arrow"/></svg></button>
+          </div>
         </li>
       </ol>
     </div>
@@ -346,6 +429,46 @@
           <p>Ce Monsieur est venu chez moi et a effectué un travail de qualité. Il est vraiment très sympathique en plus. Je recommande à 100&nbsp;%. Je vous remercie vraiment.</p>
           <footer><strong>Nathalie S.</strong><span>Intervention à domicile · septembre 2026</span></footer>
         </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions fréquentes -->
+  <section id="faq" class="section">
+    <div class="wrap faq">
+      <header class="head">
+        <h2>Questions fréquentes</h2>
+        <p class="head__lead">Une autre question&nbsp;? Le plus simple est de demander directement à Alexandre.</p>
+        <div class="faq__cta">
+          <a class="btn btn--red" href="tel:+32498741063"><svg><use href="#i-phone"/></svg>Appeler</a>
+          <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20une%20question%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Poser ma question</a>
+        </div>
+      </header>
+      <div class="faq__list">
+        <details class="qa" open>
+          <summary>Travaillez-vous pour les particuliers ou pour les entreprises ?<svg><use href="#i-right"/></svg></summary>
+          <p>Pour les deux. Chez les particuliers : garde-corps, rampes, portails, escaliers, réparations. Pour les entreprises : tuyauterie industrielle en acier et en inox, plateformes, supports et maintenance. Alexandre est certifié VCA et dispose des passeports d'accès Prayon, ArcelorMittal et Aperam.</p>
+        </details>
+        <details class="qa">
+          <summary>Comment obtenir un devis ?<svg><use href="#i-right"/></svg></summary>
+          <p>Envoyez quelques photos et des dimensions approximatives par WhatsApp, ou appelez le <a href="tel:+32498741063">0498 74 10 63</a>. Si nécessaire, Alexandre passe prendre les mesures exactes, puis vous recevez un devis détaillé.</p>
+        </details>
+        <details class="qa">
+          <summary>Où intervenez-vous ?<svg><use href="#i-right"/></svg></summary>
+          <p>L'atelier se trouve à Saint-Nicolas (4420). Metalex intervient chez les particuliers et sur les sites industriels de la région liégeoise.</p>
+        </details>
+        <details class="qa">
+          <summary>Quels métaux et quels procédés de soudure ?<svg><use href="#i-right"/></svg></summary>
+          <p>Acier, inox et autres métaux, en soudure TIG, MIG/MAG et à l'arc. Alexandre est agréé TIG toutes positions.</p>
+        </details>
+        <details class="qa">
+          <summary>Est-ce que vous posez vous-même ?<svg><use href="#i-right"/></svg></summary>
+          <p>Oui. Chaque pièce est fabriquée à l'atelier puis posée chez vous par Alexandre, finitions comprises. Vous avez un seul interlocuteur du devis à la pose.</p>
+        </details>
+        <details class="qa">
+          <summary>Pouvez-vous réparer ou modifier une pièce existante ?<svg><use href="#i-right"/></svg></summary>
+          <p>Oui : réparations, renforts, modifications de portails, de rampes ou de structures métalliques. Envoyez une photo, c'est le plus rapide pour savoir ce qui est faisable.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -526,7 +649,10 @@
       el.src = img.src; el.alt = img.alt;
     }
     stage.appendChild(el);
-    document.getElementById('viewer-cap').textContent = t.querySelector('figcaption').textContent;
+    var cap = t.querySelector('figcaption').textContent;
+    document.getElementById('viewer-cap').textContent = cap;
+    document.getElementById('viewer-wa').href = 'https://wa.me/32498741063?text=' +
+      encodeURIComponent('Bonjour Metalex, j\'ai vu « ' + cap + ' » sur votre site et je voudrais un devis pour un projet similaire.');
     document.getElementById('viewer-count').textContent = (current + 1) + ' / ' + list.length;
   }
 

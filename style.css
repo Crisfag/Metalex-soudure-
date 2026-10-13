@@ -143,6 +143,12 @@ p { margin: 0; }
   color: var(--muted); font-size: .98rem;
 }
 .hero__facts strong { color: var(--text); font-weight: 600; }
+.hero__proof {
+  display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  color: #d5dbe2; text-decoration: none; font-size: 1rem;
+}
+.hero__proof em { font-style: normal; color: var(--muted); margin-left: 4px; white-space: nowrap; }
+.hero__proof:hover span:last-child { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Le cordon de soudure : se dépose sous le titre, la pointe passe du blanc au rouge en refroidissant */
 .bead {
@@ -221,7 +227,20 @@ p { margin: 0; }
 .tile__play svg { color: var(--red-hot); width: 14px; height: 14px; }
 .tile.is-in { animation: tile-in .5s var(--ease); }
 @keyframes tile-in { from { opacity: .3; transform: scale(.97); } }
-.grid__more { margin-top: 26px; color: var(--muted); }
+.cta-strip {
+  margin-top: clamp(28px, 4vw, 44px);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px;
+  padding: clamp(22px, 3vw, 32px) clamp(22px, 3.5vw, 40px);
+  border-radius: var(--r); border: 1px solid var(--line-hi);
+  background:
+    radial-gradient(90% 140% at 100% 0%, rgba(224, 38, 44, .22), transparent 60%),
+    var(--steel);
+}
+.cta-strip__text { display: grid; gap: 6px; max-width: 52ch; }
+.cta-strip__title { font: italic 800 clamp(1.7rem, 3vw, 2.3rem)/1 var(--display); text-transform: uppercase; }
+.cta-strip__text p:last-child { color: #c9d0d8; }
+.cta-strip__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.grid__more { margin-top: 22px; color: var(--muted); }
 .grid__more a { color: var(--text); }
 
 /* ---------- Visionneuse ---------- */
@@ -244,6 +263,7 @@ p { margin: 0; }
 }
 .viewer__cap { font: 700 1.25rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .04em; }
 .viewer__count { color: var(--muted); font-size: .92rem; font-variant-numeric: tabular-nums; }
+.viewer__wa { align-self: center; min-height: 42px; padding: 9px 16px; font-size: .98rem; margin-left: 8px; }
 .viewer__btn {
   position: absolute; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
   border: 1.5px solid var(--line-hi); background: rgba(26, 31, 37, .85); color: var(--text); cursor: pointer;
@@ -265,6 +285,8 @@ p { margin: 0; }
 .svc:hover .svc__img { filter: none; }
 .svc__body { display: grid; gap: 8px; max-width: 64ch; }
 .svc__body p { color: var(--muted); }
+.svc__actions { display: grid; gap: 4px; justify-items: end; }
+.svc__actions .btn { min-height: 42px; padding: 9px 16px; font-size: .98rem; }
 .svc__link {
   display: inline-flex; align-items: center; gap: 8px; padding: 10px 0;
   font: 700 1rem/1 var(--display); letter-spacing: .06em; text-transform: uppercase;
@@ -334,6 +356,24 @@ p { margin: 0; }
 .review footer strong { color: var(--text); font-weight: 600; }
 .stars { display: inline-flex; gap: 3px; color: var(--spark); }
 .stars svg { width: 18px; height: 18px; }
+
+/* ---------- Questions fréquentes ---------- */
+.faq { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 6vw, 80px); align-items: start; }
+.faq .head { position: sticky; top: 110px; margin-bottom: 0; }
+.faq__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.faq__list { border-top: 1px solid var(--line); }
+.qa { border-bottom: 1px solid var(--line); }
+.qa summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 20px 0; cursor: pointer; list-style: none;
+  font: 700 1.3rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .01em;
+}
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary svg { width: 20px; height: 20px; color: var(--red-hot); transition: transform .3s var(--ease); }
+.qa[open] summary svg { transform: rotate(90deg); }
+.qa summary:hover { color: #fff; }
+.qa p { padding: 0 0 22px; color: #c9d0d8; max-width: 62ch; }
+.qa p a { color: var(--text); }
 
 /* ---------- Actualités ---------- */
 .news { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: clamp(32px, 6vw, 80px); align-items: start; }
@@ -409,7 +449,8 @@ p { margin: 0; }
   .nav { display: none; }
   .icon-btn { margin-left: auto; }
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .news, .contact__in, .pledge__in, .about__in { grid-template-columns: minmax(0, 1fr); }
+  .news, .contact__in, .pledge__in, .about__in, .faq { grid-template-columns: minmax(0, 1fr); }
+  .faq .head { position: static; }
   .about__photo { max-width: 520px; aspect-ratio: 4 / 3; }
   .news__intro { position: static; }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
@@ -438,7 +479,11 @@ p { margin: 0; }
   .tile--big figcaption { font-size: 1.15rem; padding: 48px 14px 14px; }
   .svc { grid-template-columns: 84px minmax(0, 1fr); align-items: start; }
   .svc__img { width: 84px; height: 84px; }
-  .svc__link { grid-column: 2; justify-self: start; padding-top: 0; }
+  .svc__actions { grid-column: 2; justify-items: start; }
+  .svc__link { padding-top: 6px; }
+  .cta-strip__actions, .cta-strip__actions .btn { width: 100%; }
+  .hero__proof { font-size: .95rem; }
+  .viewer__wa { margin: 8px 0 0; }
   .pledge__list { grid-template-columns: minmax(0, 1fr); }
   .news__actions .btn { flex: 1 1 100%; }
   .feed__gate { min-height: 360px; padding: 28px 18px; }
