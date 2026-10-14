@@ -175,20 +175,26 @@
     <div class="wrap">
       <header class="head">
         <h2>Réalisations</h2>
-        <p class="head__lead">Des chantiers récents, photographiés sur place. Touchez une photo pour l'agrandir.</p>
+        <p class="head__lead">Des chantiers récents, photographiés sur place. Choisissez une catégorie, faites défiler, touchez une photo pour l'agrandir.</p>
       </header>
 
-      <div class="filters" role="toolbar" aria-label="Filtrer les réalisations">
+      <div class="gal-bar">
+      <div class="filters" role="toolbar" aria-label="Catégories de réalisations">
         <button type="button" class="chip is-on" data-filter="tout" aria-pressed="true">Tout <span></span></button>
         <button type="button" class="chip" data-filter="garde-corps" aria-pressed="false">Garde-corps &amp; rampes <span></span></button>
         <button type="button" class="chip" data-filter="portails" aria-pressed="false">Portails &amp; portes <span></span></button>
         <button type="button" class="chip" data-filter="sur-mesure" aria-pressed="false">Escaliers &amp; sur mesure <span></span></button>
-        <button type="button" class="chip" data-filter="industrie" aria-pressed="false">Tuyauterie &amp; inox industriel <span></span></button>
+        <button type="button" class="chip" data-filter="industrie" aria-pressed="false">Industrie &amp; inox <span></span></button>
+      </div>
+      <div class="car-nav">
+        <button type="button" class="car-btn" id="car-prev" aria-label="Photos précédentes" aria-controls="grid"><svg><use href="#i-left"/></svg></button>
+        <button type="button" class="car-btn" id="car-next" aria-label="Photos suivantes" aria-controls="grid"><svg><use href="#i-right"/></svg></button>
+      </div>
       </div>
 
       <!-- Ajouter une réalisation : copier un <figure>, changer l'image, data-cat (garde-corps, portails, sur-mesure, industrie), alt et légende. -->
-      <div class="grid" id="grid">
-        <figure class="tile tile--big" data-cat="sur-mesure">
+      <div class="carousel" id="grid" tabindex="0" aria-label="Réalisations, faire défiler horizontalement">
+        <figure class="tile" data-cat="sur-mesure">
           <img src="images/escalier-limon-central.jpg" alt="Escalier droit en acier noir à limon central et marches en tôle pliée" loading="lazy" width="720" height="960">
           <figcaption>Escalier à limon central</figcaption>
         </figure>
@@ -213,7 +219,7 @@
           <img src="images/garde-corps-geometrique.jpg" alt="Garde-corps de trémie d'escalier en acier noir avec un motif de barres géométriques" loading="lazy" width="1125" height="1500">
           <figcaption>Garde-corps de trémie, motif géométrique</figcaption>
         </figure>
-        <figure class="tile tile--big" data-cat="garde-corps">
+        <figure class="tile" data-cat="garde-corps">
           <img src="images/rampe-escalier-geometrique.jpg" alt="Rampe d'escalier extérieur grise au motif géométrique, dont l'ombre se dessine sur les marches" loading="lazy" width="787" height="1400">
           <figcaption>Rampe d'escalier extérieur</figcaption>
         </figure>
@@ -255,6 +261,8 @@
         </figure>
       </div>
 
+      <div class="car-progress" aria-hidden="true"><span id="car-bar"></span></div>
+
       <aside class="cta-strip" aria-label="Demander un devis">
         <div class="cta-strip__text">
           <p class="cta-strip__title">Un projet comme ceux-ci&nbsp;?</p>
@@ -285,72 +293,46 @@
 
   <!-- Avant / après -->
   <section id="avant-apres" class="section section--steel">
-    <div class="wrap">
-      <header class="head">
+    <div class="wrap ba-wrap">
+      <header class="head ba-head">
         <h2>Avant / après</h2>
-        <p class="head__lead">Faites glisser le curseur pour voir la transformation : même endroit, avant et après le passage de Metalex.</p>
+        <p class="head__lead">Même endroit, avant et après le passage de Metalex. Faites glisser le curseur.</p>
       </header>
-      <div class="ba-grid">
-        <article class="ba-card ba-card--wide">
-          <div class="ba" style="--pos:50%">
-            <img src="images/avant-apres/garde-corps-verre-apres.jpg" alt="Après : Garde-corps en inox et verre dépoli posé sur le muret" loading="lazy" width="960" height="720">
-            <img class="ba__before" src="images/avant-apres/garde-corps-verre-avant.jpg" alt="Avant : Le muret de la terrasse, sans protection" loading="lazy" width="960" height="720">
-            <span class="ba__tag ba__tag--before">Avant</span>
-            <span class="ba__tag ba__tag--after">Après</span>
-            <span class="ba__handle" aria-hidden="true"><svg><use href="#i-left"/></svg><svg><use href="#i-right"/></svg></span>
-            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après : Garde-corps verre et inox">
-          </div>
-          <div class="ba-card__text">
-            <h3>Garde-corps verre et inox</h3>
-            <p>Un simple muret devient une terrasse protégée : poteaux en inox et panneaux de verre dépoli, avec l'intimité en plus.</p>
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20vu%20votre%20%C2%AB%20Garde-corps%20verre%20et%20inox%20%C2%BB%20%28avant%20/%20apr%C3%A8s%29%20et%20je%20voudrais%20un%20devis%20pour%20un%20projet%20similaire%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Je veux la même chose</a>
-          </div>
-        </article>
-        <article class="ba-card ">
-          <div class="ba" style="--pos:50%">
-            <img src="images/avant-apres/porte-garage-apres.jpg" alt="Après : Double porte en acier noir vitrée posée sur l'abri" loading="lazy" width="960" height="1280">
-            <img class="ba__before" src="images/avant-apres/porte-garage-avant.jpg" alt="Avant : L'abri de jardin ouvert, sans porte" loading="lazy" width="960" height="1280">
-            <span class="ba__tag ba__tag--before">Avant</span>
-            <span class="ba__tag ba__tag--after">Après</span>
-            <span class="ba__handle" aria-hidden="true"><svg><use href="#i-left"/></svg><svg><use href="#i-right"/></svg></span>
-            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après : Double porte acier vitrée">
-          </div>
-          <div class="ba-card__text">
-            <h3>Double porte acier vitrée</h3>
-            <p>Un abri ouvert sur l'allée, fermé par une double porte en acier vitrée, style atelier, faite sur mesure.</p>
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20vu%20votre%20%C2%AB%20Double%20porte%20acier%20vitr%C3%A9e%20%C2%BB%20%28avant%20/%20apr%C3%A8s%29%20et%20je%20voudrais%20un%20devis%20pour%20un%20projet%20similaire%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Je veux la même chose</a>
-          </div>
-        </article>
-        <article class="ba-card ">
-          <div class="ba" style="--pos:50%">
-            <img src="images/avant-apres/escalier-apres.jpg" alt="Après : L'escalier en tôle pliée noire posé dans la trémie" loading="lazy" width="960" height="1280">
-            <img class="ba__before" src="images/avant-apres/escalier-avant.jpg" alt="Avant : La trémie vide avec une échelle" loading="lazy" width="960" height="1280">
-            <span class="ba__tag ba__tag--before">Avant</span>
-            <span class="ba__tag ba__tag--after">Après</span>
-            <span class="ba__handle" aria-hidden="true"><svg><use href="#i-left"/></svg><svg><use href="#i-right"/></svg></span>
-            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après : Escalier en tôle pliée">
-          </div>
-          <div class="ba-card__text">
-            <h3>Escalier en tôle pliée</h3>
-            <p>Une trémie vide avec une échelle, puis un escalier en tôle pliée, posé et fini.</p>
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20vu%20votre%20%C2%AB%20Escalier%20en%20t%C3%B4le%20pli%C3%A9e%20%C2%BB%20%28avant%20/%20apr%C3%A8s%29%20et%20je%20voudrais%20un%20devis%20pour%20un%20projet%20similaire%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Je veux la même chose</a>
-          </div>
-        </article>
-        <article class="ba-card ">
-          <div class="ba" style="--pos:50%">
-            <img src="images/avant-apres/portail-plein-apres.jpg" alt="Après : Le portail plein en acier noir posé dans l'allée" loading="lazy" width="960" height="1280">
-            <img class="ba__before" src="images/avant-apres/portail-plein-avant.jpg" alt="Avant : L'allée latérale ouverte, sans portail" loading="lazy" width="960" height="1280">
-            <span class="ba__tag ba__tag--before">Avant</span>
-            <span class="ba__tag ba__tag--after">Après</span>
-            <span class="ba__handle" aria-hidden="true"><svg><use href="#i-left"/></svg><svg><use href="#i-right"/></svg></span>
-            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après : Portail plein en acier">
-          </div>
-          <div class="ba-card__text">
-            <h3>Portail plein en acier</h3>
-            <p>Une allée ouverte sur la rue, fermée par un portail plein en acier fabriqué à l'atelier puis peint.</p>
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20vu%20votre%20%C2%AB%20Portail%20plein%20en%20acier%20%C2%BB%20%28avant%20/%20apr%C3%A8s%29%20et%20je%20voudrais%20un%20devis%20pour%20un%20projet%20similaire%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Je veux la même chose</a>
-          </div>
-        </article>
+
+      <div class="ba" id="ba" style="--pos:50%">
+        <img id="ba-after" src="images/avant-apres/garde-corps-verre-apres.jpg" alt="Après : Garde-corps en inox et verre dépoli posé sur le muret" loading="lazy" width="960" height="960">
+        <img class="ba__before" id="ba-before" src="images/avant-apres/garde-corps-verre-avant.jpg" alt="Avant : Le muret de la terrasse, sans protection" loading="lazy" width="960" height="960">
+        <span class="ba__tag ba__tag--before">Avant</span>
+        <span class="ba__tag ba__tag--after">Après</span>
+        <span class="ba__handle" aria-hidden="true"><svg><use href="#i-left"/></svg><svg><use href="#i-right"/></svg></span>
+        <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après">
+      </div>
+
+      <div class="ba-side">
+        <ul class="ba-picks" aria-label="Choisir une transformation">
+          <li><button type="button" class="ba-pick is-on" aria-pressed="true"
+            data-before="images/avant-apres/garde-corps-verre-avant.jpg" data-before-alt="Avant : Le muret de la terrasse, sans protection" data-after="images/avant-apres/garde-corps-verre-apres.jpg" data-after-alt="Après : Garde-corps en inox et verre dépoli posé sur le muret" data-text="Un simple muret devient une terrasse protégée : poteaux en inox et panneaux de verre dépoli, avec l'intimité en plus.">
+            <img src="images/avant-apres/garde-corps-verre-apres.jpg" alt="" loading="lazy" width="96" height="96">
+            <span>Garde-corps verre et inox</span>
+          </button></li>
+          <li><button type="button" class="ba-pick" aria-pressed="false"
+            data-before="images/avant-apres/porte-garage-avant.jpg" data-before-alt="Avant : L'abri de jardin ouvert, sans porte" data-after="images/avant-apres/porte-garage-apres.jpg" data-after-alt="Après : Double porte en acier noir vitrée posée sur l'abri" data-text="Un abri ouvert sur l'allée, fermé par une double porte en acier vitrée, style atelier, faite sur mesure.">
+            <img src="images/avant-apres/porte-garage-apres.jpg" alt="" loading="lazy" width="96" height="96">
+            <span>Double porte acier vitrée</span>
+          </button></li>
+          <li><button type="button" class="ba-pick" aria-pressed="false"
+            data-before="images/avant-apres/escalier-avant.jpg" data-before-alt="Avant : La trémie vide avec une échelle" data-after="images/avant-apres/escalier-apres.jpg" data-after-alt="Après : L'escalier en tôle pliée noire posé dans la trémie" data-text="Une trémie vide avec une échelle, puis un escalier en tôle pliée, posé et fini.">
+            <img src="images/avant-apres/escalier-apres.jpg" alt="" loading="lazy" width="96" height="96">
+            <span>Escalier en tôle pliée</span>
+          </button></li>
+          <li><button type="button" class="ba-pick" aria-pressed="false"
+            data-before="images/avant-apres/portail-plein-avant.jpg" data-before-alt="Avant : L'allée latérale ouverte, sans portail" data-after="images/avant-apres/portail-plein-apres.jpg" data-after-alt="Après : Le portail plein en acier noir posé dans l'allée" data-text="Une allée ouverte sur la rue, fermée par un portail plein en acier fabriqué à l'atelier puis peint.">
+            <img src="images/avant-apres/portail-plein-apres.jpg" alt="" loading="lazy" width="96" height="96">
+            <span>Portail plein en acier</span>
+          </button></li>
+        </ul>
+        <p class="ba-text" id="ba-text" aria-live="polite">Un simple muret devient une terrasse protégée : poteaux en inox et panneaux de verre dépoli, avec l'intimité en plus.</p>
+        <a class="btn btn--wa btn--lg" id="ba-wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20vu%20votre%20%C2%AB%20Garde-corps%20verre%20et%20inox%20%C2%BB%20%28avant%20/%20apr%C3%A8s%29%20et%20je%20voudrais%20un%20devis%20pour%20un%20projet%20similaire%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Je veux la même chose</a>
       </div>
     </div>
   </section>
@@ -678,7 +660,38 @@
       t.hidden = !show;
       if (show) { t.classList.remove('is-in'); void t.offsetWidth; t.classList.add('is-in'); }
     });
+    carousel.scrollLeft = 0;
+    updateCarousel();
   }
+
+  /* ---------- Carrousel ---------- */
+  var carousel = document.getElementById('grid');
+  var carPrev = document.getElementById('car-prev');
+  var carNext = document.getElementById('car-next');
+  var carBar = document.getElementById('car-bar');
+  function updateCarousel() {
+    var max = carousel.scrollWidth - carousel.clientWidth;
+    var x = carousel.scrollLeft;
+    carPrev.disabled = x <= 4;
+    carNext.disabled = x >= max - 4;
+    var visibleShare = max > 0 ? carousel.clientWidth / carousel.scrollWidth : 1;
+    carBar.style.width = Math.max(visibleShare * 100, 8) + '%';
+    carBar.style.transform = 'translateX(' + (max > 0 ? (x / max) * (100 / Math.max(visibleShare, .08) - 100) : 0) + '%)';
+  }
+  function step(dir) {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    carousel.scrollBy({ left: dir * carousel.clientWidth * 0.85, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  carPrev.addEventListener('click', function () { step(-1); });
+  carNext.addEventListener('click', function () { step(1); });
+  carousel.addEventListener('scroll', updateCarousel, { passive: true });
+  window.addEventListener('resize', updateCarousel);
+  carousel.addEventListener('keydown', function (e) {
+    if (e.target !== carousel) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+  });
+  updateCarousel();
 
   document.querySelectorAll('[data-goto]').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -764,9 +777,23 @@
   });
 
   /* ---------- Avant / après ---------- */
-  document.querySelectorAll('.ba').forEach(function (ba) {
-    var range = ba.querySelector('.ba__range');
-    range.addEventListener('input', function () { ba.style.setProperty('--pos', range.value + '%'); });
+  var ba = document.getElementById('ba');
+  var baRange = document.getElementById('ba-range');
+  baRange.addEventListener('input', function () { ba.style.setProperty('--pos', baRange.value + '%'); });
+  var picks = Array.prototype.slice.call(document.querySelectorAll('.ba-pick'));
+  picks.forEach(function (pick) {
+    pick.addEventListener('click', function () {
+      picks.forEach(function (p) { var on = p === pick; p.classList.toggle('is-on', on); p.setAttribute('aria-pressed', on); });
+      var before = document.getElementById('ba-before'), after = document.getElementById('ba-after');
+      before.src = pick.dataset.before; before.alt = pick.dataset.beforeAlt;
+      after.src = pick.dataset.after; after.alt = pick.dataset.afterAlt;
+      baRange.value = 50; ba.style.setProperty('--pos', '50%');
+      ba.classList.remove('is-in'); void ba.offsetWidth; ba.classList.add('is-in');
+      var title = pick.querySelector('span').textContent;
+      document.getElementById('ba-text').textContent = pick.dataset.text;
+      document.getElementById('ba-wa').href = 'https://wa.me/32498741063?text=' +
+        encodeURIComponent('Bonjour Metalex, j\'ai vu votre « ' + title + ' » (avant / après) et je voudrais un devis pour un projet similaire : ');
+    });
   });
 
   /* ---------- Fil Facebook (chargé seulement après accord) ---------- */

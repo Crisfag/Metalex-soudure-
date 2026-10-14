@@ -11,9 +11,13 @@ Site statique (HTML + CSS + un peu de JavaScript, sans build), publié par GitHu
    - `src`, `width`, `height` et `alt` de l'image ;
    - `data-cat` : `garde-corps`, `portails`, `sur-mesure` ou `industrie` ;
    - la légende `<figcaption>`.
-   Les compteurs des filtres se mettent à jour tout seuls.
-   Une photo en paysage peut prendre la classe `tile--wide`, une photo phare `tile--big`
-   (garder un total de cases multiple de 4 : petite = 1, large = 2, grande = 4).
+   Les compteurs des filtres se mettent à jour tout seuls. La réalisation s'ajoute au carrousel
+   à l'endroit où le bloc est placé ; une photo en paysage peut prendre la classe `tile--wide`.
+
+## Ajouter un avant / après
+Déposer deux photos de même cadrage dans `images/avant-apres/` (`nom-avant.jpg`, `nom-apres.jpg`),
+puis copier un bouton `<button class="ba-pick">` dans `index.html` (section `#avant-apres`)
+en changeant `data-before`, `data-after`, leurs `alt`, `data-text` et le titre.
 
 ## Fil Facebook
 Le fil de la page (`profile.php?id=61588205213844`) n'est chargé qu'après un clic du visiteur,
