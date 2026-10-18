@@ -1,7 +1,7 @@
 # Metalex Soudure
 
 Site vitrine de **Metalex Soudure** : soudure, ferronnerie et tuyauterie industrielle à Saint-Nicolas (Liège).
-En ligne : https://crisfag.github.io/Metalex-soudure-/
+En ligne : https://metalex-soudure.be/
 
 Site statique (HTML + CSS + un peu de JavaScript, sans build), publié par GitHub Pages depuis `main`.
 

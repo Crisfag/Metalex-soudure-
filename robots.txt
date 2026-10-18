@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://metalex-soudure.be/sitemap.xml
