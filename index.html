@@ -117,6 +117,13 @@
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.6 20.4 4.9 16A8.6 8.6 0 1 1 8 19.1Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 7.6c.3 0 .6 0 .8.5l.7 1.6c.1.3 0 .5-.1.7l-.6.7c.6 1.2 1.6 2.2 2.8 2.8l.7-.6c.2-.2.4-.2.7-.1l1.6.7c.4.2.5.5.5.8 0 1-.9 1.8-1.9 1.8-3.4-.3-6.5-3.3-6.8-6.8 0-1 .8-1.9 1.6-2.1Z" fill="currentColor"/></symbol>
+  <symbol id="i-rail" viewBox="0 0 24 24"><path d="M3 6h18M3 20h18M5 6v14M19 6v14M9.7 6v14M14.3 6v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-gate" viewBox="0 0 24 24"><path d="M3 21V5M21 21V5M3 9h18M3 17h18M7.5 9v8M12 9v8M16.5 9v8M12 5v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 20h5v-4h4v-4h4V8h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 8h8a4 4 0 0 1 4 4v9M3 13h7a1 1 0 0 1 1 1v7M3 6v9M13 21h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.9 4.9l3.5 3.5M15.6 15.6l3.5 3.5M4.9 19.1l3.5-3.5M15.6 8.4l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -128,10 +135,10 @@
       <img src="images/logo-metalex-sm.png" srcset="images/logo-metalex-sm.png 450w, images/logo-metalex.png 900w" sizes="170px" alt="Metalex Soudure-Ferronnerie" width="450" height="107">
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="#realisations">Réalisations</a>
       <a href="#services">Services</a>
-      <a href="#artisan">L'artisan</a>
+      <a href="#realisations">Réalisations</a>
       <a href="#avant-apres">Avant / après</a>
+      <a href="#artisan">L'artisan</a>
       <a href="#avis">Avis</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -148,30 +155,137 @@
 
   <!-- Accueil -->
   <section class="hero">
-    <img class="hero__img" src="images/soudeur.jpg" alt="Le patron de Metalex soude un garde-corps cintré à l'atelier" width="1024" height="574" fetchpriority="high">
-    <div class="wrap hero__in">
-      <h1>Soudure, ferronnerie <br>et tuyauterie industrielle<span class="bead" aria-hidden="true"></span></h1>
-      <p class="hero__lead">Ferronnier et soudeur agréé à Saint-Nicolas&nbsp;: garde-corps, portails, escaliers et pièces en inox sur mesure, fabriqués et posés par Alexandre, le patron, de l'atelier au chantier.</p>
-      <div class="hero__cta">
-        <a class="btn btn--red btn--lg" href="tel:+32498741063"><svg><use href="#i-phone"/></svg>Appeler pour un devis</a>
-        <a class="btn btn--wa btn--lg" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Devis par WhatsApp</a>
-        <a class="btn btn--line btn--lg hero__more" href="#realisations">Voir les réalisations<svg><use href="#i-arrow"/></svg></a>
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <h1>Le métal sur mesure, <span>soudé et posé par Alexandre.</span><span class="bead" aria-hidden="true"></span></h1>
+        <p class="hero__lead">Garde-corps, portails, escaliers et tuyauterie inox. Ferronnier et soudeur agréé TIG à Saint-Nicolas, pour toute la région liégeoise.</p>
+
+        <div class="quick">
+          <p class="quick__label" id="quick-label">De quoi avez-vous besoin&nbsp;? Envoyez une photo, Alexandre vous répond.</p>
+          <div class="quick__grid" role="list" aria-labelledby="quick-label">
+          <a class="quick__tile" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20besoin%20d%27un%20garde-corps%20/%20d%27une%20rampe.%20Voici%20une%20photo%20de%20l%27endroit%20%3A%20" target="_blank" rel="noopener">
+            <svg class="quick__ico"><use href="#i-rail"/></svg>
+            <span class="quick__name">Garde-corps<small>ou rampe</small></span>
+            <svg class="quick__go"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="quick__tile" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20besoin%20d%27un%20portail%20/%20d%27une%20porte.%20Voici%20une%20photo%20de%20l%27endroit%20%3A%20" target="_blank" rel="noopener">
+            <svg class="quick__ico"><use href="#i-gate"/></svg>
+            <span class="quick__name">Portail<small>ou porte</small></span>
+            <svg class="quick__go"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="quick__tile" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20un%20projet%20d%27escalier%20/%20de%20cr%C3%A9ation%20sur%20mesure%20%3A%20" target="_blank" rel="noopener">
+            <svg class="quick__ico"><use href="#i-stairs"/></svg>
+            <span class="quick__name">Escalier<small>ou sur mesure</small></span>
+            <svg class="quick__go"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="quick__tile" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20j%27ai%20besoin%20d%27une%20intervention%20en%20soudure%20/%20tuyauterie%20/%20r%C3%A9paration%20%3A%20" target="_blank" rel="noopener">
+            <svg class="quick__ico"><use href="#i-pipe"/></svg>
+            <span class="quick__name">Industrie<small>ou réparation</small></span>
+            <svg class="quick__go"><use href="#i-arrow"/></svg>
+          </a>
+          </div>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn btn--red btn--xl" href="tel:+32498741063"><svg><use href="#i-phone"/></svg><span>Appeler Alexandre<small>0498 74 10 63</small></span></a>
+          <a class="hero__proof" href="#avis">
+            <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <span>« Le travail a été réalisé parfaitement. Je recommande à 100&nbsp;%. »<em>Jack B., portail</em></span>
+          </a>
+        </div>
       </div>
-      <a class="hero__proof" href="#avis">
-        <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-        <span>« Le travail a été réalisé parfaitement. Je recommande à 100&nbsp;%. » <em>Jack B., client</em></span>
-      </a>
-      <ul class="hero__facts">
-        <li><strong>10 ans</strong> de soudure industrielle</li>
-        <li><strong>Agréé TIG</strong> toutes positions</li>
-        <li><strong>Acier, inox</strong> et autres métaux</li>
-        <li><strong>Saint-Nicolas</strong> · province de Liège</li>
+
+      <div class="hero__media" aria-label="Quelques réalisations">
+        <figure class="hm hm--a">
+          <img src="images/avant-apres/escalier-apres.jpg" alt="Escalier en tôle pliée noire posé par Metalex" width="960" height="1280" fetchpriority="high">
+          <figcaption>Escalier en tôle pliée</figcaption>
+        </figure>
+        <figure class="hm hm--b">
+          <img src="images/balcon-inox-nuit.jpg" alt="Balcon avec garde-corps en inox et tôle perforée, de nuit" width="1050" height="1400">
+          <figcaption>Balcon inox</figcaption>
+        </figure>
+        <figure class="hm hm--c">
+          <img src="images/portail-acier-bois.jpg" alt="Portail à cadre acier noir et lames de bois rouge" width="960" height="720">
+          <figcaption>Portail acier et bois</figcaption>
+        </figure>
+        <div class="hm-badge" aria-hidden="true"><svg><use href="#i-spark"/></svg><span><strong>Agréé TIG</strong>toutes positions</span></div>
+      </div>
+    </div>
+
+    <ul class="trust wrap" aria-label="Pourquoi Metalex">
+      <li><svg><use href="#i-check"/></svg><span><strong>10 ans</strong> de soudure industrielle</span></li>
+      <li><svg><use href="#i-shield"/></svg><span><strong>Certifié VCA</strong>, passeports Prayon, ArcelorMittal, Aperam</span></li>
+      <li><svg><use href="#i-check"/></svg><span><strong>Un seul interlocuteur</strong>, du devis à la pose</span></li>
+      <li><svg><use href="#i-pin"/></svg><span><strong>Atelier à Saint-Nicolas</strong>, région liégeoise</span></li>
+    </ul>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <header class="head">
+        <h2>Ce que je fabrique</h2>
+        <p class="head__lead">Acier, inox et autres métaux. Chaque pièce est mesurée, soudée, finie et posée par la même personne.</p>
+      </header>
+      <ul class="services">
+        <li class="svc">
+          <button type="button" class="svc__media" data-goto="garde-corps" aria-label="Voir les réalisations : Garde-corps et rampes">
+            <img src="images/garde-corps-geometrique.jpg" alt="" loading="lazy" width="1125" height="1500">
+          </button>
+          <div class="svc__body">
+            <h3>Garde-corps &amp; rampes</h3>
+            <p>Balcons, trémies, terrasses, barres d'appui. Inox, verre ou acier, lignes droites ou motifs dessinés.</p>
+          </div>
+          <div class="svc__actions">
+            <button type="button" class="svc__link" data-goto="garde-corps">Voir les réalisations<svg><use href="#i-arrow"/></svg></button>
+            <a class="svc__price" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20un%20garde-corps%20/%20une%20rampe%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+          </div>
+        </li>
+        <li class="svc">
+          <button type="button" class="svc__media" data-goto="portails" aria-label="Voir les réalisations : Portails et portes">
+            <img src="images/portail-barreaux.jpg" alt="" loading="lazy" width="1500" height="1125">
+          </button>
+          <div class="svc__body">
+            <h3>Portails &amp; portes</h3>
+            <p>Portails battants ou pleins, portillons, portes vitrées style atelier, portes de sécurité.</p>
+          </div>
+          <div class="svc__actions">
+            <button type="button" class="svc__link" data-goto="portails">Voir les réalisations<svg><use href="#i-arrow"/></svg></button>
+            <a class="svc__price" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20un%20portail%20/%20une%20porte%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+          </div>
+        </li>
+        <li class="svc">
+          <button type="button" class="svc__media" data-goto="sur-mesure" aria-label="Voir les réalisations : Escaliers et sur mesure">
+            <img src="images/escalier-limon-central.jpg" alt="" loading="lazy" width="720" height="960">
+          </button>
+          <div class="svc__body">
+            <h3>Escaliers &amp; sur mesure</h3>
+            <p>Escaliers à limon central ou en tôle pliée, range-bûches, plaques inox, réparations.</p>
+          </div>
+          <div class="svc__actions">
+            <button type="button" class="svc__link" data-goto="sur-mesure">Voir les réalisations<svg><use href="#i-arrow"/></svg></button>
+            <a class="svc__price" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20une%20cr%C3%A9ation%20sur%20mesure%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+          </div>
+        </li>
+        <li class="svc">
+          <button type="button" class="svc__media" data-goto="industrie" aria-label="Voir les réalisations : Tuyauterie industrielle">
+            <img src="images/tuyauterie-inox.jpg" alt="" loading="lazy" width="1125" height="1500">
+          </button>
+          <div class="svc__body">
+            <h3>Tuyauterie industrielle</h3>
+            <p>Lignes acier et inox à brides, plateformes, supports. TIG, MIG/MAG et arc, en atelier ou sur site.</p>
+          </div>
+          <div class="svc__actions">
+            <button type="button" class="svc__link" data-goto="industrie">Voir les réalisations<svg><use href="#i-arrow"/></svg></button>
+            <a class="svc__price" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20nous%20avons%20un%20besoin%20en%20tuyauterie%20/%20soudure%20industrielle%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
 
   <!-- Réalisations -->
-  <section id="realisations" class="section">
+  <section id="realisations" class="section section--steel">
     <div class="wrap">
       <header class="head">
         <h2>Réalisations</h2>
@@ -292,7 +406,7 @@
   </dialog>
 
   <!-- Avant / après -->
-  <section id="avant-apres" class="section section--steel">
+  <section id="avant-apres" class="section">
     <div class="wrap ba-wrap">
       <header class="head ba-head">
         <h2>Avant / après</h2>
@@ -337,63 +451,6 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="wrap">
-      <header class="head">
-        <h2>Ce que je fabrique</h2>
-        <p class="head__lead">Soudure en tous genres sur acier, inox et autres métaux. Chaque pièce est mesurée, soudée, finie et posée par la même personne.</p>
-      </header>
-
-      <ol class="services">
-        <li class="svc">
-          <img class="svc__img" src="images/garde-corps-geometrique.jpg" alt="" loading="lazy" width="1125" height="1500">
-          <div class="svc__body">
-            <h3>Garde-corps &amp; rampes sur mesure</h3>
-            <p>Garde-corps de balcon et de trémie, rampes, barres d'appui, grilles. Lignes droites ou motifs dessinés pour votre maison.</p>
-          </div>
-          <div class="svc__actions">
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20un%20garde-corps%20/%20une%20rampe%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
-            <button type="button" class="svc__link" data-goto="garde-corps">Voir les garde-corps<svg><use href="#i-arrow"/></svg></button>
-          </div>
-        </li>
-        <li class="svc">
-          <img class="svc__img" src="images/portail-barreaux.jpg" alt="" loading="lazy" width="1500" height="1125">
-          <div class="svc__body">
-            <h3>Portails métalliques &amp; portes</h3>
-            <p>Portails battants, portillons, portes de sécurité. Acier seul ou cadre acier avec remplissage bois.</p>
-          </div>
-          <div class="svc__actions">
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20un%20portail%20/%20une%20porte%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
-            <button type="button" class="svc__link" data-goto="portails">Voir les portails<svg><use href="#i-arrow"/></svg></button>
-          </div>
-        </li>
-        <li class="svc">
-          <img class="svc__img" src="images/escalier-limon-central.jpg" alt="" loading="lazy" width="720" height="960">
-          <div class="svc__body">
-            <h3>Escaliers métalliques &amp; sur mesure</h3>
-            <p>Escaliers à limon central, range-bûches, plaques en inox, réparations et modifications de pièces métalliques.</p>
-          </div>
-          <div class="svc__actions">
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20voudrais%20un%20prix%20pour%20une%20cr%C3%A9ation%20sur%20mesure%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
-            <button type="button" class="svc__link" data-goto="sur-mesure">Voir le sur mesure<svg><use href="#i-arrow"/></svg></button>
-          </div>
-        </li>
-        <li class="svc">
-          <img class="svc__img" src="images/tuyauterie-inox.jpg" alt="" loading="lazy" width="1125" height="1500">
-          <div class="svc__body">
-            <h3>Tuyauterie industrielle acier &amp; inox</h3>
-            <p>Lignes en acier et inox à brides, plateformes et supports, en atelier ou sur site. Soudure TIG, MIG/MAG et à l'arc, agréé TIG toutes positions.</p>
-          </div>
-          <div class="svc__actions">
-            <a class="btn btn--wa" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20nous%20avons%20un%20besoin%20en%20tuyauterie%20/%20soudure%20industrielle%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Demander un prix</a>
-            <button type="button" class="svc__link" data-goto="industrie">Voir l'industriel<svg><use href="#i-arrow"/></svg></button>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
   <!-- L'artisan -->
   <section id="artisan" class="section section--steel about">
     <div class="wrap about__in">
@@ -417,12 +474,34 @@
     </div>
   </section>
 
+  <!-- Avis -->
+  <section id="avis" class="section">
+    <div class="wrap">
+      <header class="head head--row">
+        <h2>Ils recommandent Metalex</h2>
+        <a class="btn btn--line" href="https://www.facebook.com/profile.php?id=61588205213844&amp;sk=reviews" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Lire ou laisser un avis</a>
+      </header>
+      <div class="reviews">
+        <blockquote class="review">
+          <span class="stars" role="img" aria-label="Recommande Metalex"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <p>J'ai récemment fait appel aux services de Metalex pour un portail et je suis très satisfait. Le travail a été réalisé parfaitement. La communication a été fluide du début à la fin. Le prix a été correct et respecté… et surtout le patron est super sympa&nbsp;! Je recommande à 100&nbsp;%.</p>
+          <footer><strong>Jack B.</strong><span>Portail · juin 2026</span></footer>
+        </blockquote>
+        <blockquote class="review">
+          <span class="stars" role="img" aria-label="Recommande Metalex"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <p>Ce Monsieur est venu chez moi et a effectué un travail de qualité. Il est vraiment très sympathique en plus. Je recommande à 100&nbsp;%. Je vous remercie vraiment.</p>
+          <footer><strong>Nathalie S.</strong><span>Intervention à domicile · septembre 2026</span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
   <!-- Déroulement -->
-  <section id="deroulement" class="section steps-section">
+  <section id="deroulement" class="section section--steel steps-section">
     <div class="wrap">
       <header class="head">
         <h2>Comment ça se passe</h2>
-        <p class="head__lead">De votre première photo à la pose, quatre étapes et un seul interlocuteur.</p>
+        <p class="head__lead">De votre première photo à la pose, quatre étapes et un seul interlocuteur&nbsp;: le patron sur chaque chantier, pas de sous-traitance.</p>
       </header>
       <ol class="steps">
         <li class="step">
@@ -449,41 +528,6 @@
       <div class="steps__cta">
         <a class="btn btn--wa btn--lg" href="https://wa.me/32498741063?text=Bonjour%20Metalex%2C%20je%20souhaite%20un%20devis%20pour%20%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Commencer : envoyer mes photos</a>
         <span>ou appelez le <a href="tel:+32498741063">0498 74 10 63</a></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Engagement -->
-  <section class="pledge" aria-labelledby="pledge-title">
-    <div class="wrap pledge__in">
-      <h2 id="pledge-title" class="pledge__title">Un seul interlocuteur, <em>du devis à la pose.</em></h2>
-      <dl class="pledge__list">
-        <div><dt>Le patron sur chaque chantier</dt><dd>Pas de sous-traitance : vous savez qui travaille chez vous.</dd></div>
-        <div><dt>Fiable et durable</dt><dd>Des soudures faites pour durer, des pièces bien protégées.</dd></div>
-        <div><dt>Finitions soignées</dt><dd>Meulage, ajustage et suivi jusqu'à la pose.</dd></div>
-        <div><dt>Délais respectés</dt><dd>Une date annoncée est une date tenue.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- Avis -->
-  <section id="avis" class="section">
-    <div class="wrap">
-      <header class="head head--row">
-        <h2>Ils recommandent Metalex</h2>
-        <a class="btn btn--line" href="https://www.facebook.com/profile.php?id=61588205213844&amp;sk=reviews" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Lire ou laisser un avis</a>
-      </header>
-      <div class="reviews">
-        <blockquote class="review">
-          <span class="stars" role="img" aria-label="Recommande Metalex"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <p>J'ai récemment fait appel aux services de Metalex pour un portail et je suis très satisfait. Le travail a été réalisé parfaitement. La communication a été fluide du début à la fin. Le prix a été correct et respecté… et surtout le patron est super sympa&nbsp;! Je recommande à 100&nbsp;%.</p>
-          <footer><strong>Jack B.</strong><span>Portail · juin 2026</span></footer>
-        </blockquote>
-        <blockquote class="review">
-          <span class="stars" role="img" aria-label="Recommande Metalex"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <p>Ce Monsieur est venu chez moi et a effectué un travail de qualité. Il est vraiment très sympathique en plus. Je recommande à 100&nbsp;%. Je vous remercie vraiment.</p>
-          <footer><strong>Nathalie S.</strong><span>Intervention à domicile · septembre 2026</span></footer>
-        </blockquote>
       </div>
     </div>
   </section>
